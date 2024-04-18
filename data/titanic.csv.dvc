@@ -1,0 +1,10 @@
+md5: 64e1024edf771bc84b7ca952765a3d8f
+frozen: true
+deps:
+- checksum: W/"1cf04db18f44903b132e044548927a5b"
+  size: 41314
+  path: https://gitlab.com/a2nced_mlops/day2_dvc/-/blob/main/data/train.csv
+outs:
+- md5: 20fbe815bf09dc4f28566854de972ffa
+  size: 41314
+  path: titanic.csv
