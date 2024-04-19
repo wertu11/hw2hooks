@@ -6,7 +6,7 @@ repos:
       additional_dependencies: [flake8-docstrings==1.6.0]
 -   repo: local
     hooks:
-    - id: test
+    - id: fl
       name: test
       entry: bash -c "flake8 project_day_2/practice/day2_dvc/src/models"
       language: system
@@ -14,7 +14,7 @@ repos:
       verbose: true
 -   repo: local
     hooks:
-    - id: test
+    - id: rq
       name: test
       entry: bash -c "pip freeze > requirements.txt | git add requirements.txt | pip check"
       language: system
