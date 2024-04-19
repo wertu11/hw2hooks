@@ -1,0 +1,23 @@
+stages:
+  prepare:
+    cmd: python src/data/prepare.py 
+    deps: 
+      - data/raw/titanic.csv 
+      - src/data/prepare.py 
+    outs:
+      - data/processed/x_test.csv     
+      - data/processed/x_train.csv     
+      - data/processed/y_test.csv     
+      - data/processed/y_train.csv 
+  train:
+    cmd: python src/models/train.py 
+    deps:
+      - data/processed/x_train.csv   
+      - data/processed/y_train.csv
+      - src/models/train.py
+    params:
+      - train_logistic.random_state
+      - train_logistic.solver
+      - train_logistic.penalty
+    outs:
+      - models/model.pkl

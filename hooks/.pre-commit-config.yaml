@@ -1,0 +1,18 @@
+repos:
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    - id: flake8
+      additional_dependencies: [flake8-docstrings==1.6.0]
+      entry: bash -c "flake8 project_day_2/practice/day2_dvc/src/models"
+      language: system
+      types: [python]
+      verbose: true
+-   repo: local
+    hooks:
+    - id: test
+      name: test
+      entry: bash -c "pip freeze > requirements.txt | git add requirements.txt | pip check"
+      language: system
+      types: [python]
+      verbose: true
