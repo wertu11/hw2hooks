@@ -5,4 +5,3 @@ repos:
       name: test
       entry: bash -c "python3 hooktest.py"
       language: system
-      verbose: true
